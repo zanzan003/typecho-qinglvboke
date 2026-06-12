@@ -1,0 +1,18 @@
+<config>
+	<request action='allow' >
+		<table name='BEGIN'>
+		</table>
+	</request>
+	<response action='allow' >
+		<table name='!cache_control'>
+		</table>
+		<table name='!file_access'>
+		</table>
+		<table name='BEGIN'>
+		</table>
+		<table name='POSTMAP'>
+			<chain  action='table:!file_access'  name='file_access'>
+			</chain>
+		</table>
+	</response>
+</config>
